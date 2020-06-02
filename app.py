@@ -4,6 +4,12 @@ from typing import List
 import datetime as dt
 from bot_settings import BotSettings
 from commands.register_commands import commands
+import dotenv
+import os
+
+
+dotenv.load_dotenv()
+
 
 client = discord.Client()
 text_channels = []
@@ -58,4 +64,4 @@ async def on_message(message: discord.Message):
     # executes the default help command with *args.
     await commands[command](message, *command_args)
 
-client.run('NzE2ODY4MDcwNDIwNzc0OTQ0.XtSBlA.Ezt3Fq-03szdCnXK3lLwbdlQAqc')
+client.run(os.getenv("DISCORD"))
