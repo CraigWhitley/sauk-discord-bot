@@ -1,0 +1,8 @@
+# testing
+pytest-cov>=2.9.0,<3
+pytest>=5.4.2,<6
+
+#app
+python-dotenv>=0.13.0,<1
+motorengine>=1.0.0,<2
+discord>=1.0.1,<2
